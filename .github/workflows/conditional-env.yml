@@ -10,7 +10,8 @@ on:
           - TargetC
 
 env:
-  DEPLOY_DOMAIN: ${{ fromJSON('{ "TargetA": "site-a.example.com", "TargetB": "site-a.example.com" }')[github.event.inputs.target] || 'fallback.example.com' }}
+  DEPLOY_DOMAIN: |
+    ${{ fromJSON('{ "TargetA": "site-a.example.com", "TargetB": "site-a.example.com" }')[github.event.inputs.target] || 'fallback.example.com' }}
 
 jobs:
   test:
