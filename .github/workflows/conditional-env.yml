@@ -11,7 +11,8 @@ on:
 
 env:
   DEPLOY_DOMAIN: |
-    hello
+    hello \
+
 
 jobs:
   test:
