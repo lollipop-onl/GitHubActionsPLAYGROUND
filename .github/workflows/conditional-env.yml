@@ -22,5 +22,5 @@ jobs:
     steps:
       - run: |
           echo -----
-          echo ${{ env.DEPLOY_DOMAIN }}
+          echo "${{ env.DEPLOY_DOMAIN }}"
           echo -----
