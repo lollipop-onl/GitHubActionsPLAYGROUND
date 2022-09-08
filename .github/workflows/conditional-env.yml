@@ -1,0 +1,26 @@
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        type: choice
+        required: true
+        options:
+          - TargetA
+          - TargetB
+          - TargetC
+
+env:
+  DEPLOY_DOMAIN: |
+    ${{ fromJSON('{
+      "TargetA": "site-a.example.com",
+      "TargetB": "site-a.example.com"
+    }')[github.event.inputs.target] }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+        echo -----
+        echo ${{ env.DEPLOY_DOMAIN }}
+        echo -----
