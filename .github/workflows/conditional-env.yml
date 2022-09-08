@@ -10,7 +10,8 @@ on:
           - TargetC
 
 env:
-  DEPLOY_DOMAIN: hello
+  DEPLOY_DOMAIN: |
+    hello
 
 jobs:
   test:
