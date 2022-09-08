@@ -3,7 +3,7 @@ on:
     inputs:
       target:
         type: choice
-        required: true
+        required: false
         options:
           - TargetA
           - TargetB
