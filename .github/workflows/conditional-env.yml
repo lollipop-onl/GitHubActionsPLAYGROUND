@@ -10,9 +10,10 @@ on:
           - TargetC
 
 env:
+  SAMPLE_VALUE: ${{ secrets.SAMPLE_VALUE }}
   DEPLOY_DOMAIN: |
     ${{ fromJSON('{
-      "TargetA": "${{ secrets.SAMPLE_VALUE }}",
+      "TargetA": "$SAMPLE_VALUE",
       "TargetB": "site-a.example.com"
     }')[github.event.inputs.target] || 'fallback.example.com' }}\
 
