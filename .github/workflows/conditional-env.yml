@@ -21,6 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo "-----"
-        echo ${{ env.DEPLOY_DOMAIN }}
-        echo "-----"
+          echo -----
+          echo ${{ env.DEPLOY_DOMAIN }}
+          echo -----
