@@ -12,7 +12,7 @@ on:
 env:
   DEPLOY_DOMAIN: |
     ${{ fromJSON('{
-      "TargetA": "site-a.example.com",
+      "TargetA": "${{ secrets.SAMPLE_VALUE }}",
       "TargetB": "site-a.example.com"
     }')[github.event.inputs.target] || 'fallback.example.com' }}\
 
