@@ -10,7 +10,7 @@ on:
           - TargetC
 
 env:
-  SAMPLE_VALUE: ${{ secrets.SAMPLE_VALUE }}
+  SAMPLE_VALUE: hello
   DEPLOY_DOMAIN: |
     ${{ fromJSON('{
       "TargetA": "$SAMPLE_VALUE",
