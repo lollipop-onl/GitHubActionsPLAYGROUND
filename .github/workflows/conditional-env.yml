@@ -13,10 +13,10 @@ env:
   SAMPLE_VALUE: hello
   DEPLOY_DOMAIN: |
     ${{ fromJSON(
-      format('{
+      format('{{
         "TargetA": "{0}",
         "TargetB": "site-a.example.com"
-      }', 'aaa'))[github.event.inputs.target] || 'fallback.example.com' }}\
+      }}', 'aaa'))[github.event.inputs.target] || 'fallback.example.com' }}\
 
 jobs:
   test:
